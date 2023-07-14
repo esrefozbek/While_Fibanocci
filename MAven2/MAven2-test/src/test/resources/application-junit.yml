@@ -1,0 +1,63 @@
+spring:
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+feign:
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 2048
+    response:
+      enabled: true
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 60000
+        timeout:
+          enabled: true
+  threadpool:
+    default:
+      allowMaximumSizeToDrivergeFromCoreSize: true
+      coreSize: 60
+      execution:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 1000
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 60000
+        timeout:
+          enabled: true
+      maxQueueSize: 512
+      maximumSize: 200
+      queueSizeRejectionThreshold: 512
+info:
+  name: ${spring.application.name}
+  profile: ${spring.profiles.active}
+management:
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+  endpoints:
+    enabled-by-default: true
+    web:
+      base-path: /monitor
+      exposure:
+        include: '*'
+  health:
+    defaults:
+      enabled: true
+logging:
+  file-prefix: MAven2
+  root-level: debug
+  console-level: debug
+  path: "D:/hone"

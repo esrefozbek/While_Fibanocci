@@ -1,0 +1,9 @@
+logging:
+  level:
+    default: DEBUG
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL

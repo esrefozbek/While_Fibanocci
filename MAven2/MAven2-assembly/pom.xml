@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>MAven2-assembly</artifactId>
+    <packaging>jar</packaging>
+    <name>MAven2 :: Module :: Assembly</name>
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>MAven2</artifactId>
+        <version>${MAven2.version}</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>MAven2-adapter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>MAven2-web</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

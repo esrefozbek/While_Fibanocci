@@ -1,0 +1,1 @@
+INSERT INTO `junit_demo` ( `ID_CODE`) VALUES ('TEST000000001');

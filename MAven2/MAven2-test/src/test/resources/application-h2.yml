@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: MAven2
+  datasource:
+    druid:
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:mem:MAven2?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull;MODE=MYSQL;DB_CLOSE_DELAY=-1;TRACE_LEVEL_SYSTEM_OUT=2
+      username: MAven2
+      password: MAven2
+    schema: classpath*:h2/schema.sql
+  h2:
+    console:
+      path: /h2-console #进入h2 web操作界面的路径
+      enabled: false #开启h2 web界面
